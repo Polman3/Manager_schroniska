@@ -3,9 +3,30 @@ import java.io.IOException;
 
 public class Manager {
 
+    public static void addAnimal(){
+        String nazwa, typ, rasa, stan_zdrowia, plec;
+        int wiek;
+        System.out.println("Podaj imie zwierzątka: ");
+        Scanner odczyt_danych = new Scanner(System.in);
+        nazwa = odczyt_danych.nextLine();
+        System.out.println("Podaj typ zwierzątka: ");
+        typ = odczyt_danych.nextLine();
+        System.out.println("Podaj rase zwierzątka: ");
+        rasa = odczyt_danych.nextLine();
+        System.out.println("Podaj stan zdrowia zwierzątka: ");
+        stan_zdrowia = odczyt_danych.nextLine();
+        System.out.println("Podaj plec zwierzątka: ");
+        plec = odczyt_danych.nextLine();
+        System.out.println("Podaj wiek zwierzątka: ");
+        wiek = odczyt_danych.nextInt();
+
+        Animal zwierzatko = new Animal(nazwa,typ,rasa,stan_zdrowia,plec,wiek);
+        System.out.println(zwierzatko.getName() + zwierzatko.getType() + zwierzatko.getRace() + zwierzatko.getHealth() + zwierzatko.getSex() + zwierzatko.getAge());
+    }
+
     public static void main(String[] args) {
 
-        int quantity = 0;
+        int quantity = 20;
 
         while(1==1) {
             System.out.println("Witaj w programie: Manager schroniska");
@@ -21,6 +42,7 @@ public class Manager {
             switch (answer) {
                 case '1':
                     if(quantity>0){
+                        addAnimal();
                         quantity--;
                     }
                     else{
@@ -46,4 +68,5 @@ public class Manager {
             }
         }
     }
+
 }
