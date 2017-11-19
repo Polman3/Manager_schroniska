@@ -1,13 +1,22 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.application.Application;
+import javafx.scene.Scene;
+
 
 public class Manager {
 
-    static int quantity;
+    static int quantity = 20;
     static List<String> lista = new ArrayList<String>();
 
-    public static void addAnimal(){
+    public static void main(String[] args) {
+
+        while(1==1) {
+
+        }
+    }
+
+    /*public static void addAnimal(){
         String nazwa, typ, rasa, stan_zdrowia, plec;
         int wiek;
         System.out.println("Podaj imie zwierzątka: ");
@@ -65,18 +74,8 @@ public class Manager {
             case '5':
                 System.exit(0);
         }
-    }
-
-    public static void main(String[] args) {
-
-        quantity = 20;
-
-        System.out.println("Witaj w programie: Manager schroniska");
+    }*/
 
 
-        while(1==1) {
-            getMenu();
-        }
-    }
 
 }
